@@ -1,0 +1,11 @@
+name: Test Python Script
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Installer Python
+        run: sudo apt install python3
+      - name: Exécuter le script
+        run: python3 app.py
